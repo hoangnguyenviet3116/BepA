@@ -1,0 +1,449 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family: 'Be Vietnam Pro', sans-serif;
+}
+
+body{
+background:#fffbf4;
+}
+
+/* HEADER */
+
+header{
+background:#b71c1c;
+color:white;
+text-align:center;
+}
+
+/* TOP-HEADER */
+
+.top-header{
+display:flex;
+align-items:center;
+justify-content:center;
+padding:15px 40px;
+position:relative;
+}
+
+.header-right{
+position:absolute;
+right:40px;
+display:flex;
+gap:40px;
+align-items:center;
+}
+
+.header-right div{
+display:flex;
+flex-direction:column;
+align-items:center;
+color:white;
+cursor:pointer;
+}
+
+.header-right i{
+font-size:15px;
+margin-bottom:5px;
+}
+
+.header-right :hover{
+color:#ffb219
+}
+/* LOGO */
+
+.logo{
+position: absolute; 	
+top: 5px; 	
+left: 50px;
+display:flex;
+align-items:center;
+z-index:2000;
+}
+.logo img{
+width:160px;
+height:160px;
+border-radius:50%;
+}
+
+/* SEARCH */
+.search-box{
+display:flex;
+justify-content:center;
+gap:10px;
+}
+
+.search-box input{
+width:650px;
+padding:12px;
+border-radius:10px;
+border:none;
+}
+
+.search-box button{
+padding:12px;
+border:none;
+background:white;
+border-radius:10px;
+cursor:pointer;
+}
+.search-box button:hover{
+background:#ffb219;
+color:white;
+}
+
+/* MENU */
+
+.menu-bar{
+background:#fec655;
+position:sticky;
+top:0;
+z-index:1000;
+padding:15px 0;
+box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+
+nav ul{
+display:flex; /*cho menu nằm ngang*/
+justify-content:center; 
+list-style:none; /* bỏ dấu .*/
+gap:30px;
+}
+
+nav ul li a{
+color:rgb(255, 255, 255);
+text-decoration:none;
+font-weight:600px;
+}
+
+nav ul li a:hover{
+color:#c80000;
+}
+/* BANNER */
+
+.banner{
+background-image: url("images/Banner2.png");
+background-size: cover;
+background-position: center;
+
+height: 380px;
+margin-top:-38px;
+}
+/* FOOD */
+.food-category{
+display:flex;
+justify-content:center;
+gap:35px;
+padding:25px 15px;
+background:#ffffff;
+flex-wrap:wrap;
+}
+
+.food-item{
+text-align:center;
+cursor:pointer;
+}
+
+.food-item img{
+width:95px;
+height:95px;
+border-radius:50%;
+object-fit:cover;
+transition:0.3s;
+}
+
+.food-item img:hover{
+transform:rotate(10deg) scale(1.05);
+}
+
+.food-item p{
+margin-top:10px;
+font-weight:500;
+color:#444;
+}
+/* recipes & sidebar*/
+.content{
+display: flex;
+gap: 30px;
+}
+
+/* recipes */
+main{
+    flex: 3;
+}
+
+/* sidebar */
+aside{
+    flex: 1;
+}
+/* RECIPES */
+
+.new-recipes{
+padding:40px;
+}
+
+.new-recipes h2{
+font-size:23px;
+margin-bottom:30px;
+position:relative;
+padding-bottom:10px;
+border-bottom:1px solid #c0a27c; /* gạch xám dài */
+display:block;
+color:#5f3b18;
+}
+
+.new-recipes h2::after{
+content:"";
+position:absolute;
+left:0;
+bottom:-2px;
+width:270px;
+height:3px;
+background:#ffb219; /* gạch vàng */
+}
+
+.recipe-box{
+display:flex;
+gap:20px;
+align-items:center;
+margin-bottom:22px;
+}
+
+.recipe-img{
+width:300px;
+height:170px;
+border-radius:12px; /*bo góc*/
+overflow:hidden;
+}
+
+.recipe-img img{
+width:100%;
+height:100%;
+object-fit:cover;
+transition:0.4s;
+}
+
+.recipe-content{
+max-width:530px;
+}
+.recipe-content .mini-content{
+font-size:14px;
+color:#919191;
+line-height:1.6;
+}
+.category{
+color:#c77000;
+font-weight:600;
+margin-bottom:10px;
+font-size: 13px;
+}
+.category:hover{
+color:#b20808;
+cursor:pointer;
+}
+.recipe-content h3{
+font-size:18px;
+margin-bottom:10px;
+color: #5f3b18;
+}
+
+.recipe-content h3:hover{
+color:#feb625;
+cursor:pointer;
+}
+.stars{
+color:#ffc44f;
+font-size:15px;
+margin-bottom:10px;
+}
+
+.stars i{
+margin-right:3px;
+}
+
+.recipe-img:hover img{
+transform:rotate(1.5deg) scale(1.07); /*xoay-zoom*/
+cursor:pointer;
+}
+
+/* SIDEBAR */
+.container{
+    display: flex;
+    gap: 30px;
+}
+
+.sidebar{
+    width: 30%;
+    position: sticky;
+    top: 120px;   /* tránh bị menu che */
+    height: fit-content;
+}
+.sidebar img{
+    width: 100%;
+    border-radius: 15px;
+}
+
+.sidebar-box{
+    position: relative; /* làm mốc cho chữ */
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.sidebar-box img{
+    width: 100%;
+    border-radius: 15px;
+}
+
+/* tiêu đề */
+.sidebar-text h2{
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+/*tiêu đề-line*/
+.sidebar-text h2::after{
+    content:"";
+    display:block;
+    width:80px;
+    height:3px;
+    background:#e6a23c;
+    margin:10px auto 0;
+    border-radius:2px;
+}
+
+/*nội dung*/
+.sidebar-text ul{
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar-text li{
+    margin: 8px 0;
+    font-size: 17px;
+}
+.sidebar-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* căn giữa */
+
+    width: 80%;
+    padding: 30px;
+    color: #1c5f63;
+    background: rgba(255,255,255,0.75);
+    backdrop-filter: blur(6px);
+
+    border-radius: 20px;
+    text-align: left;
+}
+
+/* FOOTER */
+
+.footer{
+background:#680404;
+color:#ffffff;
+padding:60px 50px 20px;
+font-size:15px;
+}
+
+.footer-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:40px;
+}
+
+/* logo-FOOTER */
+
+.footer-logo{ 
+font-size:34px; 
+color:#FFD54F; 
+margin-bottom:15px; 
+}
+
+.footer-text{
+font-weight:500;
+margin-bottom:10px;
+}
+
+/* column */
+
+.footer-col h3{
+margin-bottom:15px;
+color:white;
+}
+
+.footer-col p{
+margin-bottom:8px;
+line-height:1.6;
+}
+
+/* link */
+
+.footer-links{
+list-style:none;
+margin-top:10px;
+}
+
+.footer-links li{
+margin-bottom:8px;
+}
+
+.footer-links a{
+color:#ffffff;
+text-decoration:none;
+transition:0.3s;
+}
+
+.footer-links a:hover{
+color:#ffb219;
+}
+
+/* icon */
+
+.social-icons{
+display:flex;
+gap:15px;
+}
+
+.social-icons a{
+width:45px;
+height:45px;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+border-radius:50%;
+border:1px solid #ffffff;
+
+color:#ffffff;
+text-decoration:none;
+font-size:18px;
+
+transition:0.3s;
+}
+
+.social-icons a:hover{
+background:#ffb219;
+color:rgb(255, 255, 255);
+border-color:#ffb219;
+transform:scale(1.1);
+}
+.col2-icon i{
+color:#FFD54F;
+margin-right:10px;
+font-size:18px;
+}
+
+/* copyright */
+
+.footer-bottom{
+margin-top:40px;
+padding-top:15px;
+border-top:1px solid #ffb219 ;
+text-align:center;
+font-size:14px;
+color:#ffffff;
+}
